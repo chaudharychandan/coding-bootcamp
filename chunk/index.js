@@ -22,4 +22,14 @@ function chunk(array, size) {
   return chucked;
 }
 
+function chunk1(array, size) {
+  let index = 0, chunked = [];
+  while(index < array.length) {
+    chunked.push(array.slice(index, index + size));
+    index = index +  size;
+  }
+
+  return chunked;
+}
+
 module.exports = chunk;
