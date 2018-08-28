@@ -13,4 +13,13 @@ function reverse(str) {
     .join('');
 }
 
+// Another way to reverse string
+function reverse1(str) {
+  let reversed = '';
+  for (let char of str) {
+    reversed = char + reversed;
+  }
+  return reversed;
+}
+
 module.exports = reverse;
