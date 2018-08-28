@@ -13,4 +13,10 @@ function palindrome(str) {
   return str === reversestring(str);
 }
 
+function palindrome2(str) {
+  return str
+    .split('')
+    .every((char, index) => char === str[str.length - index - 1]);
+}
+
 module.exports = palindrome;
