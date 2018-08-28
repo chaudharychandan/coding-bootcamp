@@ -1,0 +1,10 @@
+{
+  "name": "algorithmic-problems",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Chandan Kumar <chandanchaudhary@outlook.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
