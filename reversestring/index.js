@@ -22,4 +22,11 @@ function reverse1(str) {
   return reversed;
 }
 
+function reverse2(str) {
+  return str.split('')
+  .reduce((reversed, char) => {
+    return char + reversed;
+  }, '');
+}
+
 module.exports = reverse;
