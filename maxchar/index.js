@@ -23,4 +23,24 @@ function maxChar(str) {
   return maxCharMap.char;
 }
 
+function maxChar(str) {
+  const charMap = {};
+  let max = 0;
+  let maxChar = 0;
+
+  for(let char of str) {
+    charMap[char] = charMap[char] ? charMap[char] + 1 : 1;
+  }
+
+  for(let char in charMap) {
+    let charCount = charMap[char];
+    if (charCount > max) {
+      max = charCount;
+      maxChar = char;
+    }
+  }
+
+  return maxChar;
+}
+
 module.exports = maxChar;
