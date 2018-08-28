@@ -47,4 +47,12 @@ function removeSpecialCharacters(str) {
   return str.replace(/[^\w]/g, '').toLowerCase();
 }
 
+function anagrams1(stringA, stringB) {
+  return sortString(removeSpecialCharacters(stringA)) === sortString(removeSpecialCharacters(stringB));
+}
+
+function sortString(str) {
+  return str.split('').sort().join('');
+}
+
 module.exports = anagrams;
