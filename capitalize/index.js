@@ -17,4 +17,21 @@ function capitalize(str) {
   return words.join(' ');
 }
 
+function capitalize1(str) {
+  const len = str.length;
+
+  if(len === 0) return str;
+
+  let capitalized = str[0].toUpperCase();
+  for (let i=1; i < len; i++) {
+    if (str[i - 1] === ' ') {
+      capitalized += str[i].toUpperCase();
+    } else {
+      capitalized += str[i];
+    }
+  }
+
+  return capitalized;
+}
+
 module.exports = capitalize;
