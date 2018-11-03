@@ -19,4 +19,13 @@ function palindrome2(str) {
     .every((char, index) => char === str[str.length - index - 1]);
 }
 
+function palindrome3(str) {
+  const fullPath = str.length, halfPath = fullPath / 2;
+  for(let i = 0; i < halfPath; i++){
+    debugger;
+    if(str[i] !== str[fullPath - i - 1]) return false;
+  }
+  return true;
+}
+
 module.exports = palindrome;
